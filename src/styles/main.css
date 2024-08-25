@@ -1,0 +1,42 @@
+@import './Globalscrollbar.css'; 
+@import './nprogress.css';
+@import './markdown.css';
+
+:root {
+  --primary-color: #316c72;
+  --dark-bg: #18181c;
+  --Theme-bg:white;
+  /* --Theme-bg:#0F172A; */
+
+  --scrollbars-bg:rgba(0, 0, 0, 0.1);
+  --scrollbars-piece:rgba(0, 0, 0, 0.15);
+  --scrollbars-hover:rgba(0, 0, 0, 0.3);
+}
+
+.dark{
+  --scrollbars-bg:rgba(255, 255, 255, 0.1);
+  --scrollbars-piece:rgba(255, 255, 255, 0.15);
+  --scrollbars-hover:rgba(255, 255, 255, 0.3);
+}
+
+/* 方便unocss计算：1单位 = 0.25rem = 1px */
+/* html {
+  font-size: 4px; 
+} */
+
+/* body {
+  font-size: 16px;
+} */
+
+html,
+body,
+#app{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html.dark {
+  background: var(--dark-bg);
+}
+

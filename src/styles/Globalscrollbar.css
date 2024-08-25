@@ -1,0 +1,22 @@
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+  }
+  /* 滚动条区域 */
+  ::-webkit-scrollbar-track {
+    background: var(--scrollbars-bg);
+    border-radius: 0;
+  }
+  /* 滚动条 */
+  ::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    border-radius: 5px;
+    background: var(--scrollbars-piece);
+    transition: color 0.2s ease;
+  }
+  /* 滚动条悬浮 */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbars-hover);
+  }
+  

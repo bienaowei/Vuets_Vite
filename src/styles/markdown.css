@@ -1,0 +1,87 @@
+.prose pre:not(.shiki) {
+  padding: 0;
+}
+
+.prose .shiki {
+  font-family: 'DM Mono', monospace;
+  font-size: 1.2em;
+  line-height: 1.4;
+  padding: 1.25rem 1.5rem;
+  overflow-x: auto;
+  border-radius: .375rem;
+}
+
+.prose img {
+  width: 100%;
+}
+
+.shiki-light {
+  background: #f8f8f8 !important;
+}
+.shiki-dark {
+  background: #0e0e0e !important;
+}
+
+html.dark .shiki-light {
+  display: none;
+}
+
+html:not(.dark) .shiki-dark {
+  display: none;
+}
+
+/* 默认样式被'@unocss/reset/tailwind.css'; 覆盖 */
+/* 手写新增默认标签样式以及 markdown解析样式 */
+h1{
+  font-size: 38px;
+}
+h2{
+  font-size: 28px;
+}
+h3{
+  font-size: 18px;
+}
+.prose :where(h1,h2,h3,h4,h5,h6):not(:where(.not-prose,.not-prose *)) {
+  color: var(--un-prose-headings);
+  font-weight: 600;
+  line-height: 1.25;
+}
+.prose :where(blockquote):not(:where(.not-prose,.not-prose *)) {
+  margin: 1em 0;
+  padding-left: 1em;
+  font-style: italic;
+  border-left: .25em solid var(--un-prose-borders);
+}
+.prose :where(p,ul,ol,pre):not(:where(.not-prose,.not-prose *)) {
+  margin: 1em 0;
+  line-height: 1.75;
+}
+
+.prose :where(ul):not(:where(.not-prose,.not-prose *)) {
+  list-style-type: disc;
+}
+.prose :where(ol,ul):not(:where(.not-prose,.not-prose *)) {
+  padding-left: 1.25em;
+}
+.prose :where(p,ul,ol,pre):not(:where(.not-prose,.not-prose *)) {
+  margin: 1em 0;
+  line-height: 1.75;
+}
+.prose :where(a):not(:where(.not-prose,.not-prose *)) {
+  color: var(--un-prose-links);
+  text-decoration: underline;
+  font-weight: 500;
+}
+.prose :where(code):not(:where(.not-prose,.not-prose *)) {
+  color: var(--un-prose-code);
+  font-size: .875em;
+  font-weight: 600;
+  font-family: var(--un-prose-font-mono);
+}
+
+blockquote{
+  margin: 10px 0;
+}
+.prose :where(:not(pre) > code):not(:where(.not-prose,.not-prose *))::before, .prose :where(:not(pre) > code):not(:where(.not-prose,.not-prose *))::after {
+  content: "`";
+}
