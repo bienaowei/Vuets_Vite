@@ -13,6 +13,7 @@ import Markdown from 'vite-plugin-vue-markdown';
 import Shiki from 'markdown-it-shiki';
 import LinkAttributes from 'markdown-it-link-attributes';
 import VueDevTools from 'vite-plugin-vue-devtools'
+import WebfontDownload from 'vite-plugin-webfont-dl';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -75,7 +76,7 @@ export default defineConfig({
       fullInstall: true,
       include: [path.resolve(__dirname, 'locales/**')],
     }),
-    
+    WebfontDownload(),
   ],
   test:{
     include: ['test/**/*.test.ts'],
@@ -84,12 +85,18 @@ export default defineConfig({
       inline: ['@vue', '@vueuse', 'vue-demi'],
     }
   },
+  ssr: {
+    // SSG Vue-i18n workaround
+    noExternal: [/vue-i18n/],
+  },
   ssgOptions: {
     script: 'async',
     formatting: 'minify',
     crittersOptions: {
       reduceInlineStyles: false,
     },
-    onFinished() { generateSitemap() },
+    onFinished() {
+      generateSitemap();
+    },
   },
 })
