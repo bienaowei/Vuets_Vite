@@ -217,3 +217,12 @@ vite.config.ts 配置
 -pnpm test:e2e运行
 
 更多实践参考官网：https://docs.cypress.io/api/table-of-contents
+
+### 使用vite ssg
+```
+"vite-ssg": "0.23.0",
+"vite-ssg-sitemap": "0.5.1",
+```
+-配置main.ts
+-需安装vue-router unhead
+-注意该vite为4版本
