@@ -226,3 +226,15 @@ vite.config.ts 配置
 -配置main.ts
 -需安装vue-router unhead
 -注意该vite为4版本
+
+访问地址
+https://vue-vite-umber.vercel.app/
+
+
+### noscript
+在浏览器禁止加载script时加载
+
+
+### import引入排序
+-当前未使用
+https://github.com/lydell/eslint-plugin-simple-import-sort
