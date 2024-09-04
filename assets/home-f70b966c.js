@@ -1,0 +1,1 @@
+import{_ as t,r as o,o as a,c,a as r,f as s,b as n}from"./app-da83c031.js";const _={},m={"px-4":"","py-10":"",text:"center gray-700 dark:gray-200"},d=n("div",{"mt-5":"","text-20px":"","opacity-50":""}," [Home Layout] ",-1);function i(p,x){const e=o("RouterView");return a(),c("main",m,[r(e),s(" home "),d])}const u=t(_,[["render",i]]);export{u as default};

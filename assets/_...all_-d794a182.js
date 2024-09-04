@@ -1,0 +1,1 @@
+import{_ as e,o as n,c as t,j as o}from"./app-da83c031.js";const c={};function _(r,a){return n(),t("div",null," Not-Found ")}typeof o=="function"&&o(c);const f=e(c,[["render",_]]);export{f as default};
